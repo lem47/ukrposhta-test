@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="first_task.css">
+  <title>First task</title>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header_link">Home</a>
+  </header>
+
+  <div id="myData"></div>
+  <script>
+    fetch('data.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        appendData(data);
+      })
+      .catch(function(error) {
+        console.log('error: ' + error);
+      });
+
+    function appendData(data) {
+      let mainContainer = document.getElementById("myData");
+      mainContainer.classList.add("list");
+
+      for (let i = 0; i <= data.length; i++) {
+        let div = document.createElement("div");
+        div.classList.add("list_item");
+
+        div.innerHTML = data[i].attribute_id + ' ' + data[i].name + ' ' + data[i].text;
+        mainContainer.appendChild(div);
+      }
+    }
+  </script>
+</body>
+</html>
