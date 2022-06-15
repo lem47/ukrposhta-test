@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: yellow;
+  border-bottom: 1px solid black;
+}
+
+.header_link {
+  width: 150px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}

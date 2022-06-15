@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./second_task.js"></script>
+  <link rel="stylesheet" href="second_task.css">
+  <title>First task</title>
+</head>
+<body>
+  <header class="header">
+    <a href="../index.html" class="header_link">Home</a>
+  </header>
+
+  <div class="photos">
+    <img id='photo' src="https://img.freepik.com/free-photo/young-delivery-man-wor_23-2147914168.jpg?t=st=1655226622~exp=1655227222~hmac=6fc9ad00d82ac05dec49faacda430933cf910fd4cc609dd6d99d2661a5803c59&w=996">
+    </img>
+    <form class="form">
+      <p class="form_title">Please choose a photo: </p>
+      <input
+        type="radio"
+        id="photo1"
+        name="photo"
+        value="photo1"
+        onchange='check_value(event)'
+        checked
+      >
+      <label for="photo1">Photo 1</label>
+      <input
+        type="radio"
+        id="photo2"
+        name="photo"
+        value="photo2"
+        onchange='check_value(event)'
+      >
+      <label for="photo2">Photo 2</label>
+    </form>
+  </div>
+</body>
+</html>
